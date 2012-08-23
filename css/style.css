@@ -1,0 +1,51 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body
+{
+	font-family:Verdana;
+	font-size:2em;
+}
+header#cabe,nav,section,Aside,footer
+{
+	background:#225566;
+	text-align:center;
+	padding:50px;
+	color:#fff;
+	border-radius:30px;
+}
+nav
+{
+	padding:20px;
+	margin-top:10px;
+}
+section.container
+{
+	margin-top:10px;
+	width:50%;
+	min-width:200px;
+display:inline-block;
+}
+Aside
+{
+	display:inline-block;
+	vertical-align:top;
+	width:29%;
+	margin-top:10px;
+}
+footer
+{
+	padding:10px;
+	margin-top:10px;
+}
+header.cabeza,article.cuerpo,footer.pie
+{
+	background:#220022;
+	border-radius:20px;
+}
+article.cuerpo
+{
+	margin-top:10px;
+	min-height:300px;
+}
