@@ -1,0 +1,15 @@
+﻿@model galeria.Models.imagene
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@foreach(var item in ViewBag.lista)
+{
+    <div class="four columns">
+        <div class="imagestyle">
+            <img src="@item.imgurl"/>
+        </div>
+    </div>   
+}

@@ -1,0 +1,8 @@
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\bin\Debug\galeria.Tests.dll.config
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\bin\Debug\galeria.Tests.dll
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\bin\Debug\galeria.Tests.pdb
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\bin\Debug\galeria.dll
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\bin\Debug\galeria.pdb
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\obj\Debug\galeria.Tests.dll
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria.Tests\obj\Debug\galeria.Tests.pdb

@@ -1,0 +1,7 @@
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria\bin\galeria.dll
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria\bin\galeria.pdb
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria\bin\EntityFramework.dll
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria\bin\EntityFramework.xml
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria\obj\Debug\galeria.dll
+C:\Users\Ditmar\Documents\Visual Studio 2010\Projects\ejemploseminario\galeria\galeria\obj\Debug\galeria.pdb
