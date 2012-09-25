@@ -1,0 +1,32 @@
+﻿@model blog.Models.usuario
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<h2>Registrar</h2>
+<fieldset>
+    <legend>
+        Registrar Usuario
+    </legend>
+    <table>
+    @using(Html.BeginForm())
+    {
+        <tr>
+            <td>NickName:</td><td>@Html.TextBoxFor(a=>a.nickname)</td>
+        </tr>
+        <tr>
+            <td>Password:</td><td>@Html.PasswordFor(a => a.pass)</td>
+        </tr>
+        <tr>
+            <td>Re. Password</td><td>@Html.Password("repass")</td>
+        </tr>
+        <tr>
+            <td>Email</td><td>@Html.TextBoxFor(a => a.email)</td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Enviar"/> </td>
+        </tr>      
+    }
+    </table>
+</fieldset>

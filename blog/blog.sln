@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blog", "blog\blog.csproj", "{87189A80-8E44-40E7-BC08-B5E09642A42A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blog.Tests", "blog.Tests\blog.Tests.csproj", "{CBE1E905-338D-434D-A710-8DBBB88F8FCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87189A80-8E44-40E7-BC08-B5E09642A42A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87189A80-8E44-40E7-BC08-B5E09642A42A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87189A80-8E44-40E7-BC08-B5E09642A42A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87189A80-8E44-40E7-BC08-B5E09642A42A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE1E905-338D-434D-A710-8DBBB88F8FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE1E905-338D-434D-A710-8DBBB88F8FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE1E905-338D-434D-A710-8DBBB88F8FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE1E905-338D-434D-A710-8DBBB88F8FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

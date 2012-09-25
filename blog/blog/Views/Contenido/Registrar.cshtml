@@ -1,0 +1,37 @@
+﻿@model blog.Models.contenido
+
+@{
+    ViewBag.Title = "Registrar";
+}
+<fieldset>
+    <legend>
+        Registrar Contenido
+    </legend>
+    <table>
+        @using(Html.BeginForm())
+        {
+            <tr>
+                <td>
+                    Titulo
+                </td>
+                <td>
+                    @Html.TextBoxFor(a=>a.titulo)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Contenido:
+                </td>
+                <td>
+                    @Html.TextAreaFor(a => a.content)
+                    @Html.HiddenFor(a => a.idUs, new {@Value=ViewBag.id })
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+            <input type="submit" value="Enviar"/></td>
+
+            </tr>
+        }
+    </table>
+</fieldset>

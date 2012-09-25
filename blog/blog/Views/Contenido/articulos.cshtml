@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "articulos";
+}
+<script src="~/Scripts/jquery-1.6.2.js">
+</script>
+<script>
+    $(document).ready(function () {
+        $("#articulos li fieldset").each(function () {
+            $(this).hide();
+        });
+        $("#articulos li a").click(function (e) {
+            e.preventDefault();
+            var idContenido = $(this).attr("idPubli");
+            $("#formulario_" + idContenido).show(100);
+            $("#form_" + idContenido).submit(function () {
+                $.post("/Contenido/publicarcomentarios",
+                    { "content": $("#mensaje_" + idContenido).val(),"idCont":idContenido},
+                    function (servidor) {
+                        html = "<div>";
+                        html += "<h3>"+servidor.data.nickname+"<h3></br>";
+                        html += "<h3>" + servidor.data.email + "<h3></br>";
+                        html += "<h3>" + servidor.data.fecha + "<h3></br>";
+                        html += "<p>" + servidor.data.content + "<p></br>";
+                        html += "</div>";
+                        $("#comentarios_" + idContenido).append(html);
+                        //console.debug(servidor);
+                },"json");
+                return false;
+            });
+        });
+    });
+</script>
+
+<h2>El contenido se Publico con éxito</h2>
+<ul id="articulos">
+@foreach(var item in ViewBag.lista)
+{
+    <li>
+        <h2>
+            <b> @item.nickname </b>
+        </h2>
+        <h2>
+            <b>
+                <b>@item.email</b>
+            </b>
+        </h2>
+        <h3>
+            @item.fecha
+        </h3>
+        <p>
+            @item.content
+        </p>
+        <a idPubli="@item.idC" href="">Comentar</a>
+        <fieldset id="formulario_@item.idC">
+            <legend>
+                Enviar Comentarios
+            </legend>
+        <form action="" id="form_@item.idC">
+            <textarea id="mensaje_@item.idC">
+            </textarea>
+            <input type="submit" value="Enviar"/>
+        </form>
+        </fieldset>
+        <div id="comentarios_@item.idC">
+
+        </div>
+        
+    </li>
+}
+</ul>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="blog2" Class="ConectorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LELOUCH\SQLEXPRESS;Initial Catalog=blog2;User ID=Ditmar" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="blog2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.comentario" Member="comentarios">
+    <Type Name="comentario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idUs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idCont" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="content" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="contenido_comentario" Member="contenido" ThisKey="idCont" OtherKey="id" Type="contenido" IsForeignKey="true" />
+      <Association Name="usuario_comentario" Member="usuario" ThisKey="idUs" OtherKey="id" Type="usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.contenido" Member="contenidos">
+    <Type Name="contenido">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idUs" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="titulo" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="content" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="contenido_comentario" Member="comentarios" ThisKey="id" OtherKey="idCont" Type="comentario" />
+      <Association Name="usuario_contenido" Member="usuario" ThisKey="idUs" OtherKey="id" Type="usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuario" Member="usuarios">
+    <Type Name="usuario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nickname" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="pass" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="usuario_comentario" Member="comentarios" ThisKey="id" OtherKey="idUs" Type="comentario" />
+      <Association Name="usuario_contenido" Member="contenidos" ThisKey="id" OtherKey="idUs" Type="contenido" />
+    </Type>
+  </Table>
+</Database>
